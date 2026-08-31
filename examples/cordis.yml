@@ -1,0 +1,5 @@
+# Minimal example: mount dsh-memory into a DeepSeek Harness profile.
+# Install the plugin first: npm i @shayexiangpaimeng/dsh-memory
+
+plugins:
+  - '@shayexiangpaimeng/dsh-memory'
