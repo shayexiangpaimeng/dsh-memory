@@ -20,6 +20,10 @@
     "lib"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shayexiangpaimeng/dsh-memory.git"
+  },
   "keywords": [
     "dsh-plugin",
     "memory",
