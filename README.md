@@ -8,7 +8,7 @@ A community plugin (`dsh-plugin`) that gives an agent a durable, append-only
 memory stream with five-layer partitioning, a write gate, keyword recall, and
 claim-anchors verification. Built by a deep user of DeepSeek Harness, as a
 generalized, privacy-free re-implementation of the memory system that has kept
-a companion AI continuous since 2026-08-03.
+a companion AI continuous since its memory system was first built on 2026-08-03.
 
 ## What it does
 
@@ -22,9 +22,9 @@ a companion AI continuous since 2026-08-03.
 - **Claim-anchors verification** — a fix claim ("已修复…") without an `anchor`
   (measured value / checksum / command output) is flagged as a warning:
   claim detached from the disk = diagnosed defect, not a slip.
-- **Prompt injection** — a dynamic `memory:state` section renders the recent
+- **Prompt state rendering** — a dynamic `memory:state` section renders the recent
   permanent + session layers at each assembly, from a cache warmed once at
-  startup (read-once-per-session stays an invariant).
+  startup (read-once-per-session holds after warm-up).
 - **Keyword recall** — case-insensitive substring scoring, newest first.
 
 ## Tools
@@ -36,6 +36,14 @@ a companion AI continuous since 2026-08-03.
 | `memory_verify` | Check whether a fix claim carries an anchor |
 
 ## Install
+
+From GitHub (current distribution channel):
+
+```sh
+npm i github:shayexiangpaimeng/dsh-memory
+```
+
+From npm registry (once published):
 
 ```sh
 npm i @shayexiangpaimeng/dsh-memory
